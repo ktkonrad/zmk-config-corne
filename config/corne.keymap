@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
@@ -51,10 +52,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp N1        &kp N2        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS         &kp PIPE                &kp KP_DIVIDE  &kp N7                    &kp N8        &kp N9        &kp KP_MULTIPLY  &none
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &kp LEFT_BRACKET      &hm LEFT_SHIFT RIGHT_BRACKET  &kp NON_US_BACKSLASH    &kp MINUS      &mt RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT          &none
-&none  &trans        &trans        &trans                &trans                        &trans                  &kp PLUS       &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3  &kp GRAVE        &none
-                                   &kp LGUI              &trans                        &trans                  &trans         &kp NUMBER_0              &kp DOT
+&none  &trans     &trans         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS         &kp PIPE                &kp KP_DIVIDE  &kp N7                    &kp N8        &kp N9        &kp KP_MULTIPLY  &none
+&none  &kp GRAVE  &kp BACKSLASH  &kp LEFT_BRACKET      &hm LEFT_SHIFT RIGHT_BRACKET  &kp NON_US_BACKSLASH    &kp MINUS      &hm RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT          &none
+&none  &trans     &trans         &trans                &trans                        &trans                  &kp PLUS       &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3  &trans           &none
+                                 &kp LGUI              &trans                        &trans                  &trans         &kp NUMBER_0              &kp DOT
             >;
         };
 
@@ -66,10 +67,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &rgb_ug RGB_TOG  &kp AT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PRCNT    &trans     &trans          &kp UP_ARROW    &trans           &trans  &none
-&none  &trans           &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans       &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &none
-&none  &trans           &trans  &trans                &trans                 &trans       &kp UNDER  &kp PG_DN       &kp PAGE_UP     &kp RBRC         &trans  &none
-                                &kp LGUI              &trans                 &kp SPACE    &kp RET    &trans          &kp RALT
+&bt BT_SEL 0  &bl BL_TOG  &rgb_ug RGB_TOG  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PRCNT    &trans     &trans          &kp UP_ARROW    &trans           &trans  &none
+&bt BT_SEL 1  &bl BL_INC  &trans           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans       &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &none
+&bt BT_CLR    &bl BL_DEC  &trans           &trans                &trans                 &trans       &kp UNDER  &kp PG_DN       &kp PAGE_UP     &kp RBRC         &trans  &none
+                                           &kp LGUI              &trans                 &kp SPACE    &kp RET    &trans          &kp RALT
             >;
         };
     };
