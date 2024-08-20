@@ -52,7 +52,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &trans     &trans         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS         &kp PIPE                &kp KP_DIVIDE  &kp N7                    &kp N8        &kp N9        &kp KP_MULTIPLY  &none
+&none  &trans     &kp ESCAPE     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS         &kp PIPE                &kp KP_DIVIDE  &kp N7                    &kp N8        &kp N9        &kp KP_MULTIPLY  &none
 &none  &kp GRAVE  &kp BACKSLASH  &kp LEFT_BRACKET      &hm LEFT_SHIFT RIGHT_BRACKET  &kp NON_US_BACKSLASH    &kp MINUS      &hm RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SEMICOLON    &none
 &none  &trans     &trans         &trans                &kp UNDERSCORE                &trans                  &kp PLUS       &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3  &trans           &none
                                  &trans                &trans                        &trans                  &trans         &kp NUMBER_0              &kp DOT
